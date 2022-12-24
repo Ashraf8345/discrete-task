@@ -1,22 +1,23 @@
 ﻿// See https://aka.ms/new-console-template for more information
-
 Console.WriteLine("Enter a n1");
 int n1 = int.Parse(Console.ReadLine());
 Console.WriteLine("Enter a n2");
 int n2 = int.Parse(Console.ReadLine());
-int sum = 0;
-for (int x = n1; x <= n2; x++)
+int i, j;
+
+for (i = n1; i <= n2; i++)
 {
-    sum = 0;
-
-    for (int i = 1; i <= x / 2; i++)
+    int count = 0;
+    for (j = 1; j <= i; j++)
     {
-        if (x % i == 0)
-            sum += i;
+
+        if (i % j == 0)
+        { count = count + 1; }
     }
-    if (sum == x)
 
-        Console.WriteLine(x);
+    if (count <= 2)
+    { Console.WriteLine(i); }
+
+
 }
-
-
+Console.ReadKey();
